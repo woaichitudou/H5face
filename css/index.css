@@ -1,0 +1,340 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.BootUp {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.BootUpBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background: url("../images/01_bg.jpg")no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    z-index: 1;
+    -webkit-animation: BootUpBg-bg 5s infinite;
+    animation: BootUpBg-bg 5s infinite;
+}
+
+@-webkit-keyframes BootUpBg-bg {
+    0% {
+        background: url("../images/01.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    9% {
+        background: url("../images/09.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    10% {
+        background: url("../images/06.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    10.5% {
+        background: url("../images/01.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    30.5% {
+        background: url("../images/08.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    40.5% {
+        background: url("../images/06.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    60.5% {
+        background: url("../images/09.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    70.5% {
+        background: url("../images/01.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    80% {
+        background: url("../images/06.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    82% {
+        background: url("../images/09.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    83% {
+        background: url("../images/07.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    83.5% {
+        background: url("../images/08.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+    100% {
+        background: url("../images/09.jpg")no-repeat;
+        background-size: 100% 100%;
+        background-position: 0 0;
+    }
+}
+
+.BootUpsd {
+    position: absolute;
+    width: 100%;
+    height: 32.983508%;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 2
+}
+
+.BootUpAnimetion {
+    animation: myfirst 5s;
+    -moz-animation: myfirst 5s;
+    /* Firefox */
+    -webkit-animation: myfirst 5s;
+    /* Safari and Chrome */
+    -o-animation: myfirst 5s;
+    /* Opera */
+}
+
+@keyframes myfirst {
+    0% {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        margin-left: -50%;
+        margin-top: -70%;
+    }
+}
+
+@-moz-keyframes myfirst
+/* Firefox */
+
+{
+    0% {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        margin-left: 0%;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        margin-top: -70%;
+        margin-left: -50%;
+    }
+}
+
+.thundee,
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.thundee {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 3;
+}
+
+.thundee:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-animation: thunder-bg 5s infinite;
+    animation: thunder-bg 5s infinite;
+}
+
+.thundee canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canvas3 {
+    z-index: 5;
+}
+
+#canvas2 {
+    z-index: 10;
+}
+
+#canvas1 {
+    z-index: 100;
+}
+
+@-webkit-keyframes thunder-bg {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    9% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    10% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    10.5% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    80% {
+        background-color: rgba(180, 180, 180, 0.1);
+    }
+    82% {
+        background-color: rgba(59, 59, 59, 0.1);
+    }
+    83% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    83.5% {
+        background-color: rgba(222, 222, 229, 0.1);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+.pagesOne {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.text-img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 7rem auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -30%;
+    z-index: 2;
+}
+
+.btn {
+    width: 30%;
+    height: auto;
+    bottom: 25%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -15%;
+    z-index: 2;
+}
+
+.light {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    background: url("../images/Rectangle_02.png")no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 100px #ae050e;
+    animation: myfirstone 2s;
+    -webkit-animation: myfirstone 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+/* .lightone {
+            animation: myfirstone 2s;
+            -webkit-animation: myfirstone 2s;
+        } */
+
+@keyframes myfirstone {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.1;
+    }
+    40% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@-webkit-keyframes myfirstone
+/* Safari and Chrome */
+
+{
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.1;
+    }
+    40% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
