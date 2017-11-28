@@ -10,129 +10,7 @@
     <script src="./js/jq.js"></script>
     <title>Document</title>
     <style>
-        .pagesTwo {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            display: none;
-        }
-        
-        .TwoImg {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1;
-        }
-        
-        .TwoText {
-            width: 58%;
-            height: auto;
-            position: absolute;
-            left: 50%;
-            margin-left: -29%;
-            top: 8%;
-            z-index: 2;
-        }
-        
-        .Tow-btn {
-            width: 34.5%;
-            height: auto;
-            position: absolute;
-            display: block;
-            left: 50%;
-            margin-left: -17.25%;
-            bottom: 12%;
-            z-index: 2;
-        }
-        
-        .img-show {
-            width: 50%;
-            height: 36%;
-            border: 3px solid #d5a878;
-            position: absolute;
-            left: 50%;
-            top: 25%;
-            margin-left: -25%;
-            background: url("./images/898836079743850442.jpg")no-repeat;
-            background-position: 0 0;
-            background-size: 100% 100%;
-            z-index: 2;
-        }
-        
-        .img-show>img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        
-        #filed {
-            width: 50%;
-            height: 34%;
-            left: 50%;
-            top: 25%;
-            margin-left: -25%;
-            z-index: 2;
-            position: absolute;
-            opacity: 0;
-        }
-        
-        .hand {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 99;
-            display: none;
-        }
-        
-        .pagesThree {
-            width: 100%;
-            height: 100%;
-            display: none;
-            position: relative;
-        }
-        
-        .pagesThree-img-bg {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: 2;
-        }
-        
-        .pagesThree-img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            z-index: 1;
-        }
-        
-        .pagesThree-box {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            background: rgba(10, 15, 27, 0.9);
-            display: none;
-        }
-        
-        .pagesThree-box-1 {
-            width: 94%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            margin-top: 35%;
-        }
-        
-        .pagesThree-box-2 {
-            width: 30%;
-            height: auto;
-            display: block;
-            margin: 30% auto;
-        }
+
     </style>
 </head>
 
@@ -141,6 +19,7 @@
     <!-- 启动页 -->
     <div class="BootUp">
         <div class="BootUpBg"></div>
+
         <audio id="musicAudio" autoplay="autoplay" src="images/music1.mp3">
         </audio>
         <!-- 雨点 -->
@@ -153,13 +32,12 @@
     <!-- 第一屏 -->
     <div class="pagesOne">
         <div class="light"></div>
-        <img src="./images/text.png" alt="" class="text-img">
-        <img src="./images/si.png" alt="" class="btn">
+        <img src="./images/316768638658151565.jpg" alt="" class="Oneimg">
+        <div class="btn"></div>
         <audio id="si" src="images/music2.mp3"></audio>
     </div>
     <!-- 第二屏 -->
     <div class="pagesTwo">
-        <!-- <img src="./images/Rectangle3.png" alt="" class="TwoImg"> -->
         <img src="./images/text1.png" alt="" class="TwoText">
         <div class="img-show">
             <input type="file" id="filed">
@@ -440,11 +318,16 @@
         setTimeout(() => {
             init()
         }, 2000);
+
         var init = () => {
             $(".BootUpBg").fadeIn(4000)
+
             yu()
             setTimeout(() => {
                 $(".BootUpBg").addClass("BootUpAnimetion")
+                $(".BootUpBg").css({
+                    "backgroundImage": "url(./images/bggif1.gif)"
+                })
             }, 6000)
             setTimeout(() => {
                 $(".BootUp").fadeOut(1000)
@@ -453,7 +336,11 @@
                     audio.pause(); // 这个就是暂停
                 }, 1000)
                 $(".pagesOne").fadeIn(1000)
-            }, 10000)
+                setTimeout(() => {
+                    $(".light").addClass("animetion")
+                }, 1000);
+
+            }, 8500)
 
             //在input file内容改变的时候触发事件
             $('#filed').change(function() {
@@ -471,11 +358,10 @@
                     //选择所要显示图片的img，要赋值给img的src就是e中target下result里面
                     //的base64编码格式的地址
                     $('.img-show>img').get(0).src = e.target.result;
-                    $(".Tow-btn").attr("src", "./images/huan-btn.png").addClass("Tow-btn-act")
+                    $(".Tow-btn").attr("src", "./images/si.png").addClass("Tow-btn-act")
                 }
             })
         }
-
     }
 </script>
 
